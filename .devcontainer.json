@@ -1,13 +1,18 @@
-{"customizations": {
+{
+  "customizations": {
     // Configure properties specific to VS Code.
     "vscode": {
-        // Set *default* container specific settings.json values on container create.
-        "settings": {"files.associations": {
-            "*.html": "liquid"
-          },},
-        "extensions": [
-			"sissel.shopify-liquid",
-			"esbenp.prettier-vscode"
-		],
+      // Set *default* container specific settings.json values on container create.
+      "settings": {
+        "editor.formatOnSave": true,
+        "files.associations": {
+          "*.html": "liquid"
+        },
+      },
+      "extensions": [
+        "sissel.shopify-liquid",
+        "esbenp.prettier-vscode"
+      ],
     }
-}}
+  }
+}
