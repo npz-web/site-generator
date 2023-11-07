@@ -1,3 +1,85 @@
-nav{
+:root {
+    --header-height: 130px;
+    --menu-bg: #9ae9cf;
+}
+
+body {
+    position: relative;
+    margin: 0;
+}
+
+header {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: var(--header-height);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    background: var(--menu-bg);
+}
+
+header img {
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 130px);
+    background: var(--menu-bg);
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+}
+
+.btn-toggle-menu {
+    visibility: visible;
+    margin: 20px;
+    border: 0;
+    background: transparent;
+}
+
+.main-nav-hidden {
+    display: none;
+}
+
+
+@media (min-width: 640px) {
+    nav {
+        flex-direction: row;
+        height: var(--header-height);
+        align-items: center;
+        padding-right:20px;
+    }
+
+    nav a {
+        text-align: left;
+    }
+
+    .main-nav-hidden {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        position: static;
+        width: 100%;
+    }
+
+    main {
+        margin-top: var(--header-height);
+    }
+
+    .btn-toggle-menu {
+        visibility: hidden;
+    }
+
 }
