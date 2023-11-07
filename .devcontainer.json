@@ -5,6 +5,9 @@
         "settings": {"files.associations": {
             "*.html": "liquid"
           },},
-        "extensions": ["sissel.shopify-liquid"],
+        "extensions": [
+			"sissel.shopify-liquid",
+			"esbenp.prettier-vscode"
+		],
     }
 }}
